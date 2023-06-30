@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "test",\
+        "name": "@popyt/example",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["test", ["workspace:."]]\
+      ["@popyt/example", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -28,6 +28,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@tsconfig/node20", "npm:1.0.2"],\
+            ["@types/node", "npm:20.3.2"],\
+            ["chalk", "npm:5.3.0"],\
+            ["dotenv", "npm:16.3.1"],\
+            ["popyt", "npm:7.0.0"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@popyt/example", [\
+        ["workspace:.", {\
+          "packageLocation": "./",\
+          "packageDependencies": [\
+            ["@popyt/example", "workspace:."],\
             ["@tsconfig/node20", "npm:1.0.2"],\
             ["@types/node", "npm:20.3.2"],\
             ["chalk", "npm:5.3.0"],\
@@ -81,21 +96,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["popyt", "npm:7.0.0"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["test", [\
-        ["workspace:.", {\
-          "packageLocation": "./",\
-          "packageDependencies": [\
-            ["test", "workspace:."],\
-            ["@tsconfig/node20", "npm:1.0.2"],\
-            ["@types/node", "npm:20.3.2"],\
-            ["chalk", "npm:5.3.0"],\
-            ["dotenv", "npm:16.3.1"],\
-            ["popyt", "npm:7.0.0"],\
-            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["typescript", [\

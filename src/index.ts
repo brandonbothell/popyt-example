@@ -62,9 +62,8 @@ function checkForKey() {
       chalk.bgRed(
         `\nYou are missing a YouTube API key.
 Learn how to generate a key [here](https://developers.google.com/youtube/v3/getting-started).
-Then return here, press CTRL+K and type "environment", add the variable
-YOUTUBE_API_KEY
-and set it to your key. Finally, restart the instance.`
+Then return here, add the key to .envfile and rename the file to .env.
+Finally, restart the instance.`
       )
     );
     process.exit(1);
