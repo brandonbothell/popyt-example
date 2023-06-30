@@ -1,6 +1,6 @@
+import 'dotenv/config'
 import { Video, YouTube } from 'popyt'
 import chalk from 'chalk'
-import 'dotenv/config'
 
 checkForKey();
 
@@ -36,7 +36,8 @@ async function run() {
   search = await youtube.searchVideos(searchTerm, {
     pageOptions: { maxPerPage: 10 },
   });
-  logResult(search.items.map((v) => `- ${v.title}`).join("\n"));
+  logResult(search.items.map((v) => `- "${v.title}"`)
+    .join("\n"));
 
   process.exit(0);
 }
@@ -44,15 +45,15 @@ async function run() {
 function videoToString(video: Video) {
   return `${chalk.bold.greenBright("Title:")} ${video.title}
 ${chalk.bold.greenBright("Description:")} ${video.description.slice(0, 64)}...
-${chalk.bold.greenBright("Views:")} ${video.views}`;
+${chalk.bold.greenBright("Views:")} ${video.views?.toLocaleString()}`;
 }
 
 function logResult(result: string) {
-  console.log(`Result:\n${chalk.bgBlue(result)}`);
+  console.log(chalk.bgBlack(result));
 }
 
 function logQuery(query: string) {
-  process.stdout.write(`\n${chalk.bgBlackBright(`${query}...`)} `);
+  console.log(`\n${chalk.bgGreen.black(`${query}...`)} `);
 }
 
 function checkForKey() {
@@ -60,10 +61,11 @@ function checkForKey() {
       process.env.YOUTUBE_API_KEY === 'EXAMPLE_API_KEY') {
     console.error(
       chalk.bgRed(
-        `\nYou are missing a YouTube API key.
+        `
+You are missing a YouTube API key.
 Learn how to generate a key [here](https://developers.google.com/youtube/v3/getting-started).
 Then return here, add the key to .envfile and rename the file to .env.
-Finally, restart the instance.`
+Finally, run yarn start.`
       )
     );
     process.exit(1);
