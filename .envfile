@@ -1,0 +1,3 @@
+# Rename this file to .env after replacing this with a key
+# Get a key here: https://developers.google.com/youtube/v3/getting-started
+YOUTUBE_API_KEY=EXAMPLE_API_KEY
