@@ -52,7 +52,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:^10.0.1":
+"@eslint/js@npm:10.0.1":
   version: 10.0.1
   resolution: "@eslint/js@npm:10.0.1"
   peerDependencies:
@@ -126,21 +126,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@popyt/example@workspace:."
   dependencies:
-    "@eslint/js": "npm:^10.0.1"
-    "@stylistic/eslint-plugin": "npm:^5.10.0"
+    "@eslint/js": "npm:10.0.1"
+    "@stylistic/eslint-plugin": "npm:5.10.0"
     "@tsconfig/node24": "npm:24.0.4"
     "@types/node": "npm:25.6.0"
     chalk: "npm:5.6.2"
     dotenv: "npm:17.4.2"
-    eslint: "npm:^10.2.1"
-    html-entities: "npm:^2.6.0"
+    eslint: "npm:10.2.1"
+    html-entities: "npm:2.6.0"
     popyt: "npm:8.0.0"
-    typescript: "npm:^6.0.3"
-    typescript-eslint: "npm:^8.59.0"
+    typescript: "npm:6.0.3"
+    typescript-eslint: "npm:8.59.0"
   languageName: unknown
   linkType: soft
 
-"@stylistic/eslint-plugin@npm:^5.10.0":
+"@stylistic/eslint-plugin@npm:5.10.0":
   version: 5.10.0
   resolution: "@stylistic/eslint-plugin@npm:5.10.0"
   dependencies:
@@ -458,7 +458,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^10.2.1":
+"eslint@npm:10.2.1":
   version: 10.2.1
   resolution: "eslint@npm:10.2.1"
   dependencies:
@@ -635,7 +635,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-entities@npm:^2.6.0":
+"html-entities@npm:2.6.0":
   version: 2.6.0
   resolution: "html-entities@npm:2.6.0"
   checksum: 10/06d4e7a3ba6243bba558af176e56f85e09894b26d911bc1ef7b2b9b3f18b46604360805b32636f080e954778e9a34313d1982479a05a5aa49791afd6a4229346
@@ -885,7 +885,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.59.0":
+"typescript-eslint@npm:8.59.0":
   version: 8.59.0
   resolution: "typescript-eslint@npm:8.59.0"
   dependencies:
@@ -900,7 +900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^6.0.3":
+"typescript@npm:6.0.3":
   version: 6.0.3
   resolution: "typescript@npm:6.0.3"
   bin:
@@ -910,7 +910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^6.0.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>":
   version: 6.0.3
   resolution: "typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"
   bin:
