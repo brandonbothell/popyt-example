@@ -1,21 +1,26 @@
 {
   "name": "@popyt/example",
-  "version": "7.0.0",
-  "packageManager": "yarn@3.6.0",
+  "version": "8.0.0",
+  "packageManager": "yarn@4.14.1",
   "type": "module",
   "main": "build",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn tsc",
     "start": "yarn build && node ."
   },
   "dependencies": {
-    "chalk": "^5.3.0",
-    "dotenv": "^16.3.1",
-    "popyt": "^7.0.0"
+    "chalk": "5.6.2",
+    "dotenv": "17.4.2",
+    "html-entities": "^2.6.0",
+    "popyt": "8.0.0"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^1.0.2",
-    "@types/node": "^20.3.2",
-    "typescript": "^5.1.6"
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@tsconfig/node24": "24.0.4",
+    "@types/node": "25.6.0",
+    "eslint": "^10.2.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0"
   }
 }

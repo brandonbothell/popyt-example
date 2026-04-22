@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import { Video, YouTube } from 'popyt'
 import chalk from 'chalk'
+import { decode } from 'html-entities';
 
 checkForKey();
 
@@ -10,42 +11,45 @@ run();
 
 async function run() {
   let video;
-  let search;
 
   const title = "Carl Wheezer - Never Gonna Give You Up";
-
   logQuery(`Fetching title "${title}"`);
+
   video = await youtube.getVideo(title);
   logResult(videoToString(video)); // search results have no views
 
   const url = "https://youtube.com/watch?v=AyOqGRjVtls";
-
   logQuery(`Fetching URL [${url}]`);
+
   video = await youtube.getVideo(url);
   logResult(videoToString(video));
 
   const id = "dQw4w9WgXcQ";
-
   logQuery(`Fetching ID ${id}`);
+
   video = await youtube.getVideo(id);
   logResult(videoToString(video));
 
   const searchTerm = "never gonna give you up parody";
-
   logQuery(`Searching for "${searchTerm}"`);
-  search = await youtube.searchVideos(searchTerm, {
+
+  const search = await youtube.searchVideos(searchTerm, {
     pageOptions: { maxPerPage: 10 },
   });
-  logResult(search.items.map((v) => `- "${v.title}"`)
+  logResult(search.items.map((v) => `- "${decode(v.title)}"`)
     .join("\n"));
 
   process.exit(0);
 }
 
 function videoToString(video: Video) {
-  return `${chalk.bold.greenBright("Title:")} ${video.title}
-${chalk.bold.greenBright("Description:")} ${video.description.slice(0, 64)}...
-${chalk.bold.greenBright("Views:")} ${video.views?.toLocaleString()}`;
+  const desc = decode(video.description)
+  return (
+`${chalk.bold.greenBright("Title:")} ${decode(video.title)}
+${chalk.bold.greenBright("Description:")} ${
+  desc.slice(0, 64)}${desc.length > 62 ? '...' : ''}
+${chalk.bold.greenBright("Views:")} ${video.views?.toLocaleString()}`
+)
 }
 
 function logResult(result: string) {
