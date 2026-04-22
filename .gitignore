@@ -11,6 +11,5 @@
 #.pnp.*
 
 build/
-.vscode/
 .env
 .editorconfig
