@@ -1,66 +1,66 @@
 import 'dotenv/config'
 import { Video, YouTube } from 'popyt'
+import { decode } from 'html-entities'
 import chalk from 'chalk'
-import { decode } from 'html-entities';
 
-checkForKey();
+checkForKey()
 
-const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
+const youtube = new YouTube(process.env.YOUTUBE_API_KEY)
 
-run();
+void run()
 
-async function run() {
-  let video;
+async function run () {
+  let video
 
-  const title = "Carl Wheezer - Never Gonna Give You Up";
-  logQuery(`Fetching title "${title}"`);
+  const title = 'Carl Wheezer - Never Gonna Give You Up'
+  logQuery(`Fetching title "${title}"`)
 
-  video = await youtube.getVideo(title);
-  logResult(videoToString(video)); // search results have no views
+  video = await youtube.getVideo(title)
+  logResult(videoToString(video)) // search results have no views
 
-  const url = "https://youtube.com/watch?v=AyOqGRjVtls";
-  logQuery(`Fetching URL [${url}]`);
+  const url = 'https://youtube.com/watch?v=AyOqGRjVtls'
+  logQuery(`Fetching URL [${url}]`)
 
-  video = await youtube.getVideo(url);
-  logResult(videoToString(video));
+  video = await youtube.getVideo(url)
+  logResult(videoToString(video))
 
-  const id = "dQw4w9WgXcQ";
-  logQuery(`Fetching ID ${id}`);
+  const id = 'dQw4w9WgXcQ'
+  logQuery(`Fetching ID ${id}`)
 
-  video = await youtube.getVideo(id);
-  logResult(videoToString(video));
+  video = await youtube.getVideo(id)
+  logResult(videoToString(video))
 
-  const searchTerm = "never gonna give you up parody";
-  logQuery(`Searching for "${searchTerm}"`);
+  const searchTerm = 'never gonna give you up parody'
+  logQuery(`Searching for "${searchTerm}"`)
 
   const search = await youtube.searchVideos(searchTerm, {
-    pageOptions: { maxPerPage: 10 },
-  });
+    pageOptions: { maxPerPage: 10 }
+  })
   logResult(search.items.map((v) => `- "${decode(v.title)}"`)
-    .join("\n"));
+    .join('\n'))
 
-  process.exit(0);
+  process.exit(0)
 }
 
-function videoToString(video: Video) {
+function videoToString (video: Video) {
   const desc = decode(video.description)
   return (
-`${chalk.bold.greenBright("Title:")} ${decode(video.title)}
-${chalk.bold.greenBright("Description:")} ${
-  desc.slice(0, 64)}${desc.length > 62 ? '...' : ''}
-${chalk.bold.greenBright("Views:")} ${video.views?.toLocaleString()}`
-)
+    `${chalk.bold.greenBright('Title:')} ${decode(video.title)}
+${chalk.bold.greenBright('Description:')} ${
+      desc.slice(0, 64)}${desc.length > 62 ? '...' : ''}
+${chalk.bold.greenBright('Views:')} ${video.views?.toLocaleString()}`
+  )
 }
 
-function logResult(result: string) {
-  console.log(chalk.bgBlack(result));
+function logResult (result: string) {
+  console.log(chalk.bgBlack(result))
 }
 
-function logQuery(query: string) {
-  console.log(`\n${chalk.bgGreen.black(`${query}...`)} `);
+function logQuery (query: string) {
+  console.log(`\n${chalk.bgGreen.black(`${query}...`)} `)
 }
 
-function checkForKey() {
+function checkForKey () {
   if (process.env.YOUTUBE_API_KEY === undefined ||
       process.env.YOUTUBE_API_KEY === 'EXAMPLE_API_KEY') {
     console.error(
@@ -71,7 +71,7 @@ Learn how to generate a key [here](https://developers.google.com/youtube/v3/gett
 Then return here, add the key to .envfile and rename the file to .env.
 Finally, run yarn start.`
       )
-    );
-    process.exit(1);
+    )
+    process.exit(1)
   }
 }

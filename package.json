@@ -6,7 +6,8 @@
   "main": "build",
   "scripts": {
     "build": "yarn tsc",
-    "start": "yarn build && node ."
+    "start": "yarn build && node .",
+    "lint": "yarn eslint"
   },
   "dependencies": {
     "chalk": "5.6.2",
@@ -15,11 +16,15 @@
     "popyt": "8.0.0"
   },
   "devDependencies": {
+    "@eslint/compat": "2.0.5",
+    "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@stylistic/eslint-plugin": "5.10.0",
     "@tsconfig/node24": "24.0.4",
     "@types/node": "25.6.0",
     "eslint": "10.2.1",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-unused-imports": "4.4.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.59.0"
   }
