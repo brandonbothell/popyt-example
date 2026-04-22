@@ -46,8 +46,7 @@ function videoToString (video: Video) {
   const desc = decode(video.description)
   return (
     `${chalk.bold.greenBright('Title:')} ${decode(video.title)}
-${chalk.bold.greenBright('Description:')} ${
-      desc.slice(0, 64)}${desc.length > 62 ? '...' : ''}
+${chalk.bold.greenBright('Description:')} ${desc.slice(0, 64)}${desc.length > 62 ? '...' : ''}
 ${chalk.bold.greenBright('Views:')} ${video.views?.toLocaleString()}`
   )
 }
