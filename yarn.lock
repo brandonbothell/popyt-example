@@ -169,7 +169,7 @@ __metadata:
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-unused-imports: "npm:4.4.1"
     html-entities: "npm:2.6.0"
-    popyt: "npm:8.0.0"
+    popyt: "npm:8.0.1"
     typescript: "npm:6.0.3"
     typescript-eslint: "npm:8.59.0"
   languageName: unknown
@@ -1856,10 +1856,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popyt@npm:8.0.0":
-  version: 8.0.0
-  resolution: "popyt@npm:8.0.0"
-  checksum: 10/4a4b4636ed80f84d22dccb51a0551019f91ef89ceb811f499c44bf812bd353c28d2f8d6de09f81f014192b6bd2713bd56cd29a4e955eb4e99d5ce23bd3bf8e1e
+"popyt@npm:8.0.1":
+  version: 8.0.1
+  resolution: "popyt@npm:8.0.1"
+  checksum: 10/a99e3bc8853778ab5eb3983f55d09ad234c28e2df1d1d02b4fa975fc59fc8865e7babf13c51862987e8abf07ad570faa30acd0ff721dcbcf855786d33a4d600f
   languageName: node
   linkType: hard
 
