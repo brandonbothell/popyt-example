@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-import", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:2.32.0"],\
           ["eslint-plugin-unused-imports", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:4.4.1"],\
           ["html-entities", "npm:2.6.0"],\
-          ["popyt", "npm:8.0.1"],\
+          ["popyt", "npm:9.0.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["typescript-eslint", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:8.59.0"]\
         ],\
@@ -261,7 +261,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-import", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:2.32.0"],\
           ["eslint-plugin-unused-imports", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:4.4.1"],\
           ["html-entities", "npm:2.6.0"],\
-          ["popyt", "npm:8.0.1"],\
+          ["popyt", "npm:9.0.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["typescript-eslint", "virtual:5a6e157a73ff6f3909b577220b3f8c75ae728d6c7962886e64e1195022891fa855252bce4afbec5766042cfc8c6ea013e5fa55dfa674224452abe5b0916285e3#npm:8.59.0"]\
         ],\
@@ -2362,10 +2362,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["popyt", [\
-      ["npm:8.0.1", {\
-        "packageLocation": "./.yarn/cache/popyt-npm-8.0.1-751969fb13-a99e3bc885.zip/node_modules/popyt/",\
+      ["npm:9.0.0", {\
+        "packageLocation": "./.yarn/cache/popyt-npm-9.0.0-8656ebe53d-37a1eaf716.zip/node_modules/popyt/",\
         "packageDependencies": [\
-          ["popyt", "npm:8.0.1"]\
+          ["popyt", "npm:9.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
